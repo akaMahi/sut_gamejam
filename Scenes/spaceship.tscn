@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bw8sdumeijsj"]
+
+[ext_resource type="Texture2D" uid="uid://qnwkwdk5ogbm" path="res://Assest/spaceship.png" id="1_y3uy0"]
+[ext_resource type="Script" uid="uid://kp7syq8nqeqh" path="res://Scripts/spaceship.gd" id="3_pmkdn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qkqkj"]
+size = Vector2(20, 25.339233)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("3_pmkdn")
+speed = 600
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2.3841858e-06, -9.049999)
+scale = Vector2(5, 3.39)
+shape = SubResource("RectangleShape2D_qkqkj")
+debug_color = Color(0.87961257, 0.26824844, 0.5362256, 0.41960785)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_y3uy0")
